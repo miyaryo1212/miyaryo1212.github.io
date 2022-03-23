@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Search Twitter User by ID</title>
+    <meta name="description" content="#">
+    <link rel="stylesheet" type="text/css" href="#">
+    <meta property="og:title" content="Search Twitter User by ID">
+    <meta property="og:description" content="ログイン不要でTwitter IDを入力するだけでツイートを閲覧する">
+    <meta property="og:site_name" content="#">
+    <meta property="og:url" content="#">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <h1>TwitterユーザーをIDで検索</h1>
+    <p>ログイン不要で相手のTwitterのIDを入力するだけで閲覧可能。</p>
+    <strong>※注意！</strong>
+    <ui>
+        <li><b>公開アカウントのみ</b>閲覧可能。鍵アカウントは見れません。</li>
+        <li>新しく検索するときは、ページを<b>再読み込み</b>してください。</li>
+    </ui>
+
+    <div class="inputArea">
+        <label for="inputBox">@以降を入力:</label><br>
+        <input type="text" id="inputBox" name="inputBox" size="20">
+        <button type="button" onclick="search();">表示</button>
+    </div>
+
+    <script>
+        function search() {
+            var AccountID = document.getElementById("inputBox").value;
+            let TwitterTimeline = document.getElementById("twitter-timeline");
+            //aタグを取得
+
+            var MakeLink = "https://twitter.com/" + AccountID + "?ref_src=twsrc%5Etfw";
+            //入力でリンクを作成
+
+            TwitterTimeline.setAttribute("href", MakeLink);
+            console.log("Link Updated!");
+            //作成したリンクでhref属性の値を更新
+
+            var script = document.createElement("script");
+            script.src = "https://platform.twitter.com/widgets.js";
+            document.body.appendChild(script);
+            //Twitter社提供のJavaScriptコードの読み込み
+            //コードを読み込む前にhref属性を書き換えなければならない
+        }
+    </script>
+
+    <a class="twitter-timeline" data-lang="ja" data-width="400" href="https://twitter.com/Twitter?ref_src=twsrc%5Etfw" id="twitter-timeline">Tweets by Twitter</a>
+
+    <p><strong>表示されない場合は？</strong><br>該当するアカウントは存在しません。有効なIDか確認し、ページを再読み込みしてから正しいIDを再入力してください。<br><input type="button" value="ページの再読込" onclick="window.location.reload();"></p>
+</body>
+
+</html>
