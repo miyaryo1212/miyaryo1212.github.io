@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>miyaryo1212</title>
-    <meta name="description" content="SpaceXが好きな16歳高校生">
+    <title>Home / miyaryo1212</title>
+    <meta name="description" content="Just a high schooler in Japan">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta property="og:title" content="Search Twitter User by ID">
+    <meta property="og:description" content="#">
+    <meta property="og:site_name" content="#">
+    <meta property="og:url" content="#">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
     <script src="mit/jquery-1.9.1.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -16,91 +22,97 @@
     <div id="menu_button"><span id="menu_button_line"></span></div>
     <div id="overlay"></div>
 
-    <script src="./header_1.js"></script>
+    <header>
+        <div id="header_block">
+            <div id="site_title">
+                <a href="./index.html">miyaryo1212</a>
+            </div>
+            <div id="main_menu">
+                <nav>
+                    <ul class="list_design">
+                        <li><a href="./index.html#about">About</a></li>
+                        <li><a href="./index.html#devices">Devices</a></li>
+                        <li><a href="./index.html#programming">Programming</a></li>
+                        <li><a href="./index.html#software">Software</a></li>
+                        <li><a href="./index.html#SNS">SNS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <article>
         <div class="block">
-            <div class="content">
+            <div class="content" id="about">
                 <h1>About</h1>
-                <p>LenovoとSpaceXが好きな高校生</p>
+                <p>SpaceXとLenovoが好きなただの日本の高校生。</p>
+                <p><span class="supplement">Just a high schooler who likes SpaceX and Lenovo in Japan.</span></p>
             </div>
         </div>
 
         <div class="block">
-            <div class="content">
+            <div class="content" id="devices">
                 <h1>Devices</h1>
-                <p>ちょっとだけ紹介させて。</p>
-                <h2>Lenovo Yoga 6</h2>
+                <p>使用環境とか。
+                    <br>TwitterでWindows Insidersの一員として活動(?)をしているが、下記の環境が前提となっている。</p>
+                <h2>Lenovo Yoga 6 <span class="supplement">13ALC6</span></h2>
                 <p><img src="./images/LenovoYoga6.png" width="300px"></p>
-                <p>11月に購入してもらった。天板がファブリック素材という個性的な2 in 1モバイルノート。売り文句の通り、Ryzen 5000seriesプロセッサー搭載で処理能力には優れている。</p>
+                <p>11月に購入。
+                    <br>Ryzen 5000Series搭載で処理能力が高い。排熱に優れていて性能を活かすことができる。</p>
                 <ul class="list_design">
                     <li>Ryzen 7 5700U</li>
                     <li>Radeon RX Vega 8 Graphics</li>
-                    <li>Windows 11 Build 22557.1 (Insider)</li>
-                    <li>RAM : 16GB</li>
-                    <li>SSD : 475GB</li>
-                    <li>FHD 13.3"</li>
-                    <li>Wi-Fi 6</li>
+                    <li>Windows 11 Home (Build 22581)</li>
+                    <li>DDR4 3200MHz 16GB</li>
+                    <li>PCIe-NVMe 475GB</li>
+                    <li>FHD 13.3" IPS 10点マルチタッチ</li>
+                    <li>802.11ax / Wi-Fi 6</li>
                 </ul>
                 <h2>Lenovo L22i-30</h2>
                 <p><img src="./images/LenovoL22i-30.jpg" width="300px"></p>
-                <p>1月に購入。当時15,000円と、他製品と比べかなり安く買えたのでは？</p>
+                <p>1月に購入。
+                    <br>低価格ながら3辺狭額ベゼルで見た目も良い。</p>
                 <ul class="list_design">
-                    <li>FHD 21.5"</li>
-                    <li>HDMI 1.4</li>
-                </ul>
-                <h2>Apple iPhone 7</h2>
-                <p>最近全く働かないのは僕の使い方の問題だろうか。ゲームはおろかTwitterやLINEなど各種SNSの動作も怪しくなってきた。</p>
-                <ul class="list_design">
-                    <li>iOS 15.0.2</li>
+                    <li>FHD 21.5" IPS</li>
+                    <li>HDMI 1.4 / VGA</li>
                 </ul>
             </div>
         </div>
 
-        <!--
-
-        <div class="block">
+        <div class="block" id="programming">
             <div class="content">
-                <h1>Games</h1>
-                <h2>Minecraft</h2>
-                <ul class="list_design">
-                    <li>Minecraft 1.18.1 [Vanilla]</li>
-                    <li>Minecraft 1.18.1 [Modded]
-                        <ul class="list_design">
-                            <li>Tough As Nails</li>
-                        </ul>
-                    </li>
-                    <li>Minecraft 1.16.5 [Modded]
-                        <ul class="list_design">
-                            <li>Security Craft</li>
-                        </ul>
-                    </li>
-                    <li>Minecraft 1.12.2 [Modded]
-                        <ul class="list_design">
-                            <li>Industrial Craft 2</li>
-                            <li>Mekanism</li>
-                        </ul>
-                    </li>
-                </ul>
+                <h1>Programming</h1>
+                <h2>Python 3</h2>
+                <p>OpenCVを使った画像分析とMarkovifyというライブラリを利用したディープラーニングを学習中。</p>
+                <h2>C#</h2>
+                <p>物理エンジン「Unity」を使うために学習中。</p>
             </div>
         </div>
-    -->
+
+        <div class="block" id="software">
+            <div class="content">
+                <h1>Software</h1>
+                <h2>AviUtl <span class="supplement">動画編集</span></h2>
+                <P>少しづつ進めている。いつかはYouTubeにも投稿してみたい。モーショングラフィックスにも挑戦してみる。</P>
+                <h2>Blender <span class="supplement">モデリング</span></h2>
+                <p>Blenderで3DモデリングしたものをA-FrameとAR.jsを用いてWebARを作成する。</p>
+                <h2>Unity <span class="supplement">物理エンジン / ゲームエンジン</span></h2>
+                <p>本来は3Dゲームのための統合開発環境だが、物理シュミレーションとしても使える。</p>
+            </div>
+        </div>
 
         <div class="block" id="SNS">
             <div class="content">
                 <h1>SNS</h1>
+                <p><span class="supplement">情報の教科書によればTwitterはミニブログという扱いだから、いわゆる"ツイ廃"は、"こまめにブログを更新する習慣づいた人"という認識でいいよね。
+                    <br>- miyaryo1212 / Twitter</span></p>
                 <ul>
                     <li><a href="https://github.com/miyaryo1212" target="_blank">GitHub</a></li>
-                    <li><a href="https://qiita.com/miyaryo1212" target="_blank">Qiita</a></li>
-                    <li><a href="https://twitter.com/miyaryo1212" target="_blank">Twitter(Main)</a></li>
-                    <li><a href="https://twitter.com/miyaryo1212_wi" target="_blank">Twitter(Windows Insider)</a></li>
-                    <li><a href="https://twitter.com/miyaryo144" target="_blank">Twitter(Sub)</a></li>
+                    <li><a href="https://twitter.com/miyaryo1212" target="_blank">Twitter</a></li>
                     <li><a href="https://www.instagram.com/miyaryo1212" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.pinterest.jp/miyaryo1212" target="_blank">Pinterest(1)</a></li>
-                    <li><a href="https://www.pinterest.jp/miyaryo144" target="_blank">Pinterest(2)</a></li>
                 </ul>
-                <p>↓最近はTwitterしか使っていない↓</p>
-                <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/miyaryo1212?ref_src=twsrc%5Etfw">Tweets by miyaryo1212</a>
+                <p>メインアカウントのツイート一覧
+                    <br><a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/miyaryo1212?ref_src=twsrc%5Etfw">Tweets by miyaryo1212</a></p>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
@@ -108,7 +120,12 @@
 
     <div id="back_top"><img src="images/back-top.png" alt="トップへ戻る" /></div>
 
-    <script src="./Footer.js"></script>
+    <footer>
+
+        <p>Copyright(C)miyaryo1212</p>
+        <p><a href="http://japanism.info/free-template.html" target="_blank" rel="nofollow">Free Template</a></p>
+
+    </footer>
 
 </body>
 
